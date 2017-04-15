@@ -1,3 +1,11 @@
+<?php
+	if(empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off"){
+		$redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['Request_URL'];
+		header('HTTP/1.1 31 Moved Permanently');
+		header('Location: ' . $redirect);
+	}
+?>
+
 <!doctype html>
 <html>
 
@@ -10,8 +18,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Тег для увеличения масштаба сайта(в основном на моб)-->
 		<link rel="shortcut icon" type="image/x-icon" href="img/vocabulary.ico"> <!--картинка возле названия сайта во вкладке-->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/main_page.css" type="text/css" charset="utf-8">
 
 	</head>
 
