@@ -1,10 +1,10 @@
 <ifModule mod_rewrite.c>
 RewriteEngine on
 RewriteBase /
-RewriteCond %{HTTP_HOST} ^www.ymundurs.com
-RewriteRule (.*) https://ymundrus.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^http://vrester-org.github.io
+RewriteRule (.*) http://vrester-org.github.io$1 [R=301,L]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3-9}\ /index.\.php\ HTTP/
-RewriteRule ^index\.php$ https://itproger.com/ [R=301,L]
+RewriteRule ^index\.php$ http://vrester-org.github.io [R=301,L]
 <IfModule>
 
 ServerSignature Off
